@@ -6,10 +6,20 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f2f2f2;
+    color: white;
     text-align: center;
     padding-top: 90px; 
 }
+.bg {
+  position: fixed;
+  inset: 0;
+  background: 
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url("images/back\ 2.jpeg") center/cover no-repeat;
+  filter: blur(1px);
+  z-index: -1;
+}
+
 
 section {
     margin-top: 20px;
@@ -18,8 +28,8 @@ section {
 }
 
 .profile-img {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid white;
@@ -134,7 +144,7 @@ html {
 
 .skill-fill.php {
     width: 50%;
-    background-color: #ff0000;
+    background-color: #3e20d2;
 }
 
 .skill-fill.lara {
@@ -144,7 +154,7 @@ html {
 
 .skill-fill.py {
     width: 30%;
-    background-color: #0f09cb;
+    background: linear-gradient(135deg, #eeff00, #0037ff);
 }
 
 .skill-fill.go {
@@ -174,7 +184,7 @@ html {
 
 .card {
     
-    background-color: white;
+    background-color: rgb(46, 46, 46);
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -192,12 +202,12 @@ html {
 .card a {
     display: inline-block;
     margin-top: 10px;
-    color: #269be4;
+    color: #009dff;
     text-decoration: none;
     font-weight: bold;
 }
 .card-a:hover{
-color: #0032b0;
+color: #002990;
 }
 
 .project-img {
@@ -244,8 +254,8 @@ padding-bottom: 20px;
 }
 
 .sertifikat-btn {
-    background: #333;
-    color: white;
+    background: #ddd;
+    color: #000000;
     border: none;
     padding: 10px 20px;
     margin: 0 10px;
