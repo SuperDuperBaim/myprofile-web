@@ -127,17 +127,17 @@ html {
 }
 
 .skill-fill.html {
-    width: 90%;
+    width: 80%;
     background-color: #e34c26;
 }
 
 .skill-fill.css {
-    width: 70%;
+    width: 50%;
     background-color: #7226e4;
 }
 
 .skill-fill.js {
-    width: 60%;
+    width: 20%;
     background-color: #f0db4f;
     color: black;
 }
@@ -148,7 +148,7 @@ html {
 }
 
 .skill-fill.lara {
-    width: 40%;
+    width: 50%;
     background-color: #ff0000;
 }
 
