@@ -1,61 +1,52 @@
-// ambil elemen hamburger dan nav menu
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
+// 1. Reveal Animation on Scroll
+const reveals = document.querySelectorAll('.reveal');
 
-// saat hamburger di klik
-if (hamburger) {
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-}
+const revealOnScroll = () => {
+    reveals.forEach(window_section => {
+        const windowHeight = window.innerHeight;
+        const revealTop = window_section.getBoundingClientRect().top;
+        const revealPoint = 150;
 
-// auto close menu saat link diklik
-const links = document.querySelectorAll(".nav-links a");
-
-links.forEach(link => {
-    link.addEventListener("click", () => {
-        // Cek dulu apakah menu aktif (untuk mobile)
-        if (navLinks.classList.contains("active")) {
-            navLinks.classList.remove("active");
+        if (revealTop < windowHeight - revealPoint) {
+            window_section.classList.add('active');
         }
     });
-});
+};
 
-/// ===== Carousel Sertifikat =====
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll(); // Jalankan sekali saat load
+
+// 2. Carousel Sertifikat
 const track = document.querySelector('.sertifikat-track');
-const images = document.querySelectorAll('.sertifikat-img');
-const prevBtn = document.querySelector('.sertifikat-btn.prev');
 const nextBtn = document.querySelector('.sertifikat-btn.next');
+const prevBtn = document.querySelector('.sertifikat-btn.prev');
 
-let posisi = 0;
-const gambarWidth = 250 + 20; // width gambar + gap
+let index = 0;
 
 nextBtn.addEventListener('click', () => {
-    // Hitung berapa gambar yang bisa ditampilkan
-    const containerWidth = document.querySelector('.sertifikat-wrapper').offsetWidth;
-    const totalWidth = images.length * gambarWidth;
-    
-    // Jika masih ada gambar di kanan, geser ke kanan
-    if (Math.abs(posisi) < totalWidth - containerWidth) {
-        posisi -= gambarWidth;
-        track.style.transform = `translateX(${posisi}px)`;
-    } else {
-        // Jika sudah di ujung, balik ke awal
-        posisi = 0;
-        track.style.transform = `translateX(0px)`;
-    }
+    const images = document.querySelectorAll('.sertifikat-img');
+    const moveAmount = images[0].clientWidth + 20;
+    index = (index + 1) % images.length;
+    track.style.transform = `translateX(-${index * moveAmount}px)`;
 });
 
 prevBtn.addEventListener('click', () => {
-    // Jika masih ada gambar di kiri, geser ke kiri
-    if (posisi < 0) {
-        posisi += gambarWidth;
-        track.style.transform = `translateX(${posisi}px)`;
-    } else {
-        // Jika sudah di awal, ke ujung
-        const containerWidth = document.querySelector('.sertifikat-wrapper').offsetWidth;
-        const totalWidth = images.length * gambarWidth;
-        posisi = -(totalWidth - containerWidth);
-        track.style.transform = `translateX(${posisi}px)`;
-    }
+    const images = document.querySelectorAll('.sertifikat-img');
+    const moveAmount = images[0].clientWidth + 20;
+    index = (index - 1 + images.length) % images.length;
+    track.style.transform = `translateX(-${index * moveAmount}px)`;
+});
+
+// 3. Hamburger Menu
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    navLinks.style.flexDirection = 'column';
+    navLinks.style.position = 'absolute';
+    navLinks.style.top = '70px';
+    navLinks.style.right = '8%';
+    navLinks.style.background = '#0f0f0f';
+    navLinks.style.padding = '20px';
 });
