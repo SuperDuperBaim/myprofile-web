@@ -335,3 +335,64 @@ h2::after {
     gap: 15px;
     margin-top: 20px;
 }
+
+.linkcont-a {
+    padding: 12px 30px;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+}
+
+.linkcont-a:hover {
+    background: white;
+    color: black;
+}
+
+.footer {
+    padding: 40px 20px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #666;
+    font-size: 0.8rem;
+    margin-top: 50px;
+}
+
+/* ===================================================
+   ANIMATION: REVEAL ON SCROLL
+   =================================================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.9s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===================================================
+   RESPONSIVE DESIGN (MOBILE)
+   =================================================== */
+@media (max-width: 768px) {
+    h1 { font-size: 2.2rem; }
+    
+    .nav-links { display: none; } /* Hamburger logic handled via JS */
+    
+    .hamburger { display: block; }
+    
+    .skills-grid {
+        grid-template-columns: 1fr; /* Jadi 1 kolom di HP */
+    }
+    
+    .sertifikat-img {
+        min-width: 280px;
+        height: 180px;
+    }
+    
+    section { padding: 60px 20px; }
+    
+    .profile-img { width: 180px; height: 180px; }
+}
