@@ -1,337 +1,337 @@
+/* ===================================================
+   RESET & BASE STYLES
+   =================================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Jarak agar judul section tidak tertutup navbar */
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     color: white;
+    background-color: #0f0f0f;
+    overflow-x: hidden;
+    line-height: 1.6;
     text-align: center;
-    padding-top: 90px; 
 }
+
 .bg {
-  position: fixed;
-  inset: 0;
-  background: 
-    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-    url("images/back\ 2.jpeg") center/cover no-repeat;
-  filter: blur(1px);
-  z-index: -1;
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), 
+                url("images/back 2.jpeg") center/cover no-repeat;
+    z-index: -1;
+    filter: blur(2px);
 }
 
-
-section {
-    margin-top: 20px;
-    padding: 20px;
-    padding-bottom: 20px;
-}
-
-.profile-img {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid white;
-    margin-top: 10px;
-    margin-bottom: 15px;
-}
-
-.profile-img:hover {
-    transform: scale(1.05);
-    transition: 0.3s;
-}
-
+/* ===================================================
+   NAVBAR (Glassmorphism)
+   =================================================== */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #222;
-    padding: 15px 20px;
-    color: white;
+    padding: 15px 8%;
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
     z-index: 1000;
+    background: rgba(15, 15, 15, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .logo {
+    color: white;
     text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.logo a:hover{
-    color: white;
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
 }
 
 .nav-links {
-    list-style: none;
     display: flex;
-}
-
-.nav-links li {
-    margin-left: 20px;
+    list-style: none;
+    gap: 25px;
 }
 
 .nav-links a {
-    color: white;
+    color: #bbb;
     text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: white;
 }
 
 .hamburger {
     display: none;
-    font-size: 26px;
+    font-size: 1.8rem;
     cursor: pointer;
 }
 
-.navbar a:hover {
-    color: #484848;
+/* ===================================================
+   HERO / HEADER
+   =================================================== */
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
 }
 
-html {
-    scroll-behavior: smooth;
+.profile-img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 25px;
+    transition: transform 0.4s ease;
 }
 
-#skills {
-    margin-top: 30px;
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hero-desc {
+    color: #aaa;
+    max-width: 600px;
+    font-weight: 300;
+    margin: 0 auto;
+}
+
+/* ===================================================
+   SECTIONS GENERAL
+   =================================================== */
+section {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: white;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* About Glass Card */
+.glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 45px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+}
+
+/* ===================================================
+   SKILLS (2 Columns)
+   =================================================== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 60px;
+    text-align: left;
+    margin-top: 20px;
 }
 
 .skill {
-    max-width: 400px;
-    margin: 15px auto;
-    text-align: left;
+    margin-bottom: 15px;
 }
 
-.skill span {
-    font-weight: bold;
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
 }
 
 .skill-bar {
-    background-color: #ddd;
-    border-radius: 20px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
     overflow: hidden;
-    margin-top: 5px;
 }
 
 .skill-fill {
-    height: 25px;
-    color: white;
-    text-align: right;
-    padding-right: 10px;
-    line-height: 25px;
-    border-radius: 20px;
-    animation: loadBar 2s ease;
+    height: 100%;
+    border-radius: 10px;
+    transition: 1.5s cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
 
-.skill-fill.html {
-    width: 80%;
-    background-color: #e34c26;
-}
+/* Skill Colors */
+.html { background: #e34c26; }
+.css { background: #264de4; }
+.js { background: #f0db4f; color: black; }
+.php { background: #4f5b93; }
+.lara { background: #ff2d20; }
+.py { background: #3776ab; }
+.go { background: #00add8; }
 
-.skill-fill.css {
-    width: 50%;
-    background-color: #7226e4;
-}
-
-.skill-fill.js {
-    width: 20%;
-    background-color: #f0db4f;
-    color: black;
-}
-
-.skill-fill.php {
-    width: 50%;
-    background-color: #3e20d2;
-}
-
-.skill-fill.lara {
-    width: 40%;
-    background-color: #ff0000;
-}
-
-.skill-fill.py {
-    width: 20%;
-    background: linear-gradient(135deg, #eeff00, #0037ff);
-}
-
-.skill-fill.go {
-    width: 10%;
-    background-color: #269be4;
-}
-
-@keyframes loadBar {
-    from {
-        width: 0;
-    }
-}
-
-/* =====PORTOFOLIO==== */
-#portofolio {
-    margin-top: 40px;
-}
-
+/* ===================================================
+   PORTFOLIO & ORGANIZATION CARDS
+   =================================================== */
 .portofolio-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    max-width: 900px;
-    margin: 20px auto;
-    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
 }
 
 .card {
-    
-    background-color: rgb(46, 46, 46);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.4s ease;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-12px);
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
 }
 
-.card h3 {
-    margin-bottom: 10px;
-}
-
-.card a {
-    display: inline-block;
-    margin-top: 10px;
-    color: #009dff;
-    text-decoration: none;
-    font-weight: bold;
-}
-.card-a:hover{
-color: #002990;
+.card-img-wrapper {
+    width: 100%;
+    height: 200px; /* Mengunci tinggi kotak gambar agar seragam */
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 20px;
 }
 
 .project-img {
     width: 100%;
-    border-radius: 10px;
+    height: 100%;
+    object-fit: cover; /* Mengunci aspek rasio agar tidak gepeng */
+    transition: 0.6s;
+}
+
+.card:hover .project-img {
+    transform: scale(1.1);
+}
+
+.card h3 {
+    font-size: 1.2rem;
     margin-bottom: 10px;
 }
 
-/*SERTIFIKAT*/
-#sertifikat {
-    margin-top: 40px;
-    padding: 20px;
+.card p {
+    font-size: 0.85rem;
+    color: #aaa;
+    flex-grow: 1;
 }
 
-.sertih2 {
-padding-bottom: 20px;
+.card-a {
+    margin-top: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    align-self: flex-start;
+    transition: 0.3s;
 }
 
+.card-a:hover {
+    border-bottom-color: white;
+}
+
+/* ===================================================
+   SERTIFIKAT CAROUSEL
+   =================================================== */
 .sertifikat-wrapper {
-    max-width: 900px;
+    width: 100%;
+    max-width: 1000px;
     margin: 0 auto;
-    overflow: hidden; /* Sembunyikan yang keluar */
-    position: relative;
+    overflow: hidden;
 }
 
 .sertifikat-track {
     display: flex;
     gap: 20px;
-    transition: transform 0.4s ease;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    padding: 10px 0;
 }
 
 .sertifikat-img {
-    width: 250px; /* UKURAN FIX, jangan pakai % */
-    height: 180px;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 2px solid #ddd;
+    min-width: 320px; /* Lebar dikunci */
+    max-width: 320px;
+    height: 220px; /* Tinggi dikunci */
+    object-fit: contain; /* Agar sertifikat tidak terpotong teksnya */
+    background: #1a1a1a;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+    flex-shrink: 0;
 }
 
-/* Tombol di bawah */
+/* Navigasi Sertifikat (Di Tengah Bawah) */
 .sertifikat-nav {
-    text-align: center;
-    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 35px;
 }
 
 .sertifikat-btn {
-    background: #ddd;
-    color: #000000;
-    border: none;
-    padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1.5rem;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .sertifikat-btn:hover {
-    background: #555;
+    background: white;
+    color: black;
 }
 
-
-.contacth2 {
-padding-bottom: 20px;
-}
-
-.linkcont-a {
-    font-size: 20px;
-    color: #ffffff;
-    text-decoration: none;
-    background-color: #269be4;
-    border-radius: 30px;
-    margin: 10px;
-    padding-inline: 15px;
-}
-
-.linkcont-a:hover {
-  background-color: #0032b0;
-}
-
-.footer {
-    background-color: #222;
-    color: white;
-    margin-top: 10px;
-    font-size: 12px;
-    padding: 10px;
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: #222;
-        text-align: center;
-        display: none;
-        flex-direction: column;
-        padding: 20px 0;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        margin: 15px 0;
-    }
-
-    .hamburger {
-        display: block;
-    }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .sertifikat-img {
-        width: 250px;
-        height: 180px;
-    }
-}
-
-@media (max-width: 480px) {
-    .sertifikat-img {
-        width: 220px;
-        height: 160px;
-    }
+/* ===================================================
+   CONTACT & FOOTER
+   =================================================== */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
 }

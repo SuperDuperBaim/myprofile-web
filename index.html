@@ -3,145 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    <title>Profile | Ananda Ibrahim</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- background img -->
-     <div class="bg"></div>
+    <div class="bg"></div>
      
-    <!-- Navbar -->
     <nav class="navbar">
-        <div><a href="#profilehome" class="logo">My Profile</a></div>
-
+        <a href="#home" class="logo">My Profile</a>
         <ul class="nav-links" id="navLinks">
             <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#portofolio">Portfolio</a></li>
             <li><a href="#sertifikat">Certificates</a></li>
             <li><a href="#Organizations">Organizations</a></li>
             <li><a href="#contact">Contact</a></li>
-            
         </ul>
-
         <div class="hamburger">☰</div>
     </nav>
 
-    <!-- Header -->
-    <header id="home">
-        <img src="images/back 1.jpeg" alt="foto profile" class="profile-img" id="profilehome">
-        <h1>Halo, Saya Baim</h1>
-        <p>Cita cita saya jago coding tanpa nonton Dea Afrizal, nanya GPT atau bolak balik w3school.</p>
-    </header>
-
-    <!-- About -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Nama saya<b> Ananda Ibrahim Hilal Syafrudin</b>, Mahasiswa S1 Teknologi Informasi di Universitas Darma Persada. <br>
-        Saya suka penasaran bagaimana dunia bekerja, saya suka mempelajari hal baru.<br>
-        Fun fact saya tidak bisa bermain alat music, tapi saya bisa membuat lagu. <br>
-        Dan saya masih suka bulak balik liat tutorial coding</p>
-    </section>
-    
-    <!-- Skill bar -->
-    <section id="skills">
-        <h2>Skill</h2>
-
-        <div class="skill">
-            <span>HTML</span>
-            <div class="skill-bar">
-                <div class="skill-fill html">80%</div>
+    <main>
+        <header id="home" class="reveal">
+            <div class="hero-content">
+                <img src="images/back 1.jpeg" alt="foto profile" class="profile-img">
+                <h1 class="glitch-text">Halo, Saya Baim</h1>
+                <p class="hero-desc">Cita cita saya jago coding tanpa nonton Dea Afrizal, nanya GPT atau bolak balik w3school.</p>
+                <div class="scroll-indicator"></div>
             </div>
-        </div>
+        </header>
 
-        <div class="skill">
-            <span>CSS</span>
-            <div class="skill-bar">
-                <div class="skill-fill css">50%</div>
+        <section id="about" class="reveal">
+            <div class="glass-card">
+                <h2>About Me</h2>
+                <p>Nama saya <b>Ananda Ibrahim Hilal Syafrudin</b>, Mahasiswa S1 Teknologi Informasi di Universitas Darma Persada. <br><br>
+                Saya suka penasaran bagaimana dunia bekerja, saya suka mempelajari hal baru. 
+                Fun fact: saya tidak bisa bermain alat musik, tapi saya bisa membuat lagu. <br>
+                Dan saya masih suka bolak-balik lihat tutorial coding.</p>
             </div>
-        </div>
-
-        <div class="skill">
-            <span>PHP</span>
-            <div class="skill-bar">
-                <div class="skill-fill php">50%</div>
-            </div>
-        </div>
-
-        <div class="skill">
-            <span>Laravel</span>
-            <div class="skill-bar">
-                <div class="skill-fill lara">40%</div>
-            </div>
-        </div>
-
-                <div class="skill">
-            <span>JavaScript</span>
-            <div class="skill-bar">
-                <div class="skill-fill js">20%</div>
-            </div>
-        </div>
+        </section>
         
-        <div class="skill">
-            <span>Python</span>
-            <div class="skill-bar">
-                <div class="skill-fill py">20%</div>
+        <section id="skills" class="reveal">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-column">
+                    <div class="skill">
+                        <div class="skill-info"><span>HTML</span><span>80%</span></div>
+                        <div class="skill-bar"><div class="skill-fill html" style="width: 80%;"></div></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info"><span>CSS</span><span>50%</span></div>
+                        <div class="skill-bar"><div class="skill-fill css" style="width: 50%;"></div></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info"><span>JavaScript</span><span>20%</span></div>
+                        <div class="skill-bar"><div class="skill-fill js" style="width: 20%;"></div></div>
+                    </div>
+                </div>
+                <div class="skill-column">
+                    <div class="skill">
+                        <div class="skill-info"><span>PHP / Laravel</span><span>50%</span></div>
+                        <div class="skill-bar"><div class="skill-fill php" style="width: 50%;"></div></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info"><span>Python</span><span>20%</span></div>
+                        <div class="skill-bar"><div class="skill-fill py" style="width: 20%;"></div></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info"><span>Golang</span><span>10%</span></div>
+                        <div class="skill-bar"><div class="skill-fill go" style="width: 10%;"></div></div>
+                    </div>
+                </div>
             </div>
-        </div>
-        
-        <div class="skill">
-            <span>Golang</span>
-            <div class="skill-bar">
-                <div class="skill-fill go">10%</div>
+        </section>
+
+        <section id="portofolio" class="reveal">
+            <h2>Portfolio</h2>
+            <div class="portofolio-container">
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="images/project/project 1.png" alt="Gas Station" class="project-img">
+                    </div>
+                    <h3>Gas Station Company</h3>
+                    <p>Gas station website built using HTML, CSS, and JS.</p>
+                    <a href="https://superduperbaim.github.io/gas-station-company-website/" target="_blank" class="card-a">View Project</a>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="images/project/project 3.png" alt="Web Rental PS" class="project-img">
+                    </div>
+                    <h3>Web Rental PS</h3>
+                    <p>Built using PHP, Laravel, and Laravel Breeze.</p>
+                    <a href="https://tif-lbj.my.id/" target="_blank" class="card-a">View Project</a>
+                </div>
+
+                <div class="card">
+                    <div class="card-img-wrapper">
+                    <img src="images/project/back 2.jpeg" alt="Project" class="project-img">
+                    </div>
+                    <h3>Upcoming projects will be added soon.</h3>
+                    <p>i'm still learning :D</p>
+                    <a href="#" target="_blank" class="card-a">View Project</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Portfolio -->
-    <section id="portofolio">
-        <h2>Portfolio</h2>
-        <div class="portofolio-container">
-            <div class="card">
-                <h3>Gas Station Company</h3>
-                <img src="images/project/project 1.png" alt="Project" class="project-img">
-                <p>Gas station website built using HTML, CSS, and JavaScript (Vibe Coding).</p>
-                <a href="https://superduperbaim.github.io/gas-station-company-website/" target="_blank" class="card-a">View Project</a>
-            </div>
-
-            <div class="card">
-                <h3>Web Profile</h3>
-                <img src="images/project/project 2.png" alt="Project" class="project-img">
-                <p>A simple portfolio website using with HTML, CSS, and JavaScript.</p>
-                <a href="#" target="_blank" class="card-a">View Project</a>
-            </div>
-
-            <div class="card">
-                <h3>Web Rental PS</h3>
-                <img src="images/project/project 3.png" alt="Project" class="project-img">
-                <p>Website built using PHP, Laravel, and Laravel Breeze, and deployed on a hosting server.</p>
-                <a href="https://tif-lbj.my.id/" target="_blank" class="card-a">View Project</a>
-            </div>
-
-            <div class="card">
-                <h3>Upcoming projects will be added soon.</h3>
-                <img src="images/project/back 2.jpeg" alt="Project" class="project-img">
-                <p>i'm still learning :D</p>
-                <a href="#" target="_blank" class="card-a">View Project</a>
-            </div>
-        </div>
-    </section>
-
-<!-- Sertifikat -->
-<section id="sertifikat">
-    <h2 class="sertih2">Seminar Certificates & Bootcamp</h2>
-
-    <div class="sertifikat-wrapper">
-        <div class="sertifikat-track">
+        <section id="sertifikat" class="reveal">
+            <h2 class="sertih2">Certificates</h2>
+            <div class="sertifikat-wrapper">
+                <div class="sertifikat-track">
             <img src="images/sertifikat/CCSE_anandaibrahimhsgmail.com_CCSE 260126-01-1-00064_page-0001 (1).jpg" alt="Sertifikat Software engineering RevoU" class="sertifikat-img">
+            <img src="images/sertifikat/Sertifikat - UIUX Desain Grafis (Figma).jpg" alt="Sertifikat UI UX" class="sertifikat-img">
             <img src="images/sertifikat/S5 - sertifikat_samsung.jpg" alt="Sertifikat Samsung" class="sertifikat-img">
             <img src="images/sertifikat/S2 - CISCO IT ESSENTIALS.jpg" alt="CISCO IT ESSENTIALS" class="sertifikat-img">
             <img src="images/sertifikat/Sertifikat- Oracle Cloud Infrastructure Foundations I_page-0001.jpg" alt="Oracle cloud" class="sertifikat-img">
@@ -149,71 +122,71 @@
             <img src="images/sertifikat/S2- Seminar Teknologi Teknik Festival 24 Juni 2024.png" alt="Seminar Teknologi" class="sertifikat-img">
             <img src="images/sertifikat/S3- Seminar Nasional HIMIFDA 2025.jpg" alt="Seminar Nasional" class="sertifikat-img">
             <img src="images/sertifikat/S4 - SPACE VOLVER - Ananda IHS.png" alt="SPACE VOLVER" class="sertifikat-img">
-            
+                </div>
+            </div>
+            <div class="sertifikat-nav">
+                <button class="sertifikat-btn prev">‹</button>
+                <button class="sertifikat-btn next">›</button>
+            </div>
+        </section>
+
+<section id="Organizations" class="reveal">
+    <h2>Organizations & Experience</h2>
+    <div class="portofolio-container">
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="images/kegiatan/1.jpeg" alt="PPKMB" class="project-img">
+            </div>
+            <h3>PPKMB 2025</h3>
+            <p>Foto bersama penutupan PPKMB 2025</p>
         </div>
-    </div>
-
-    <!-- Tombol navigasi di bawah -->
-    <div class="sertifikat-nav">
-        <button class="sertifikat-btn prev">‹</button>
-        <button class="sertifikat-btn next">›</button>
-    </div>
-
-    <!--Organizations & Bootcamp Experience -->
-</section >
-    <h2 id= "Organizations" style="padding-top: 30px;">Organizations & Bootcamp Experience</h2>
-        <div class="portofolio-container">
-            <div class="card">
-                <h3>PPKMB 2025</h3>
-                <img src="images/kegiatan/1.jpeg" alt="Project" class="project-img">
-                <p>Foto bersama penutupan PPKMB 2025</p>
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="images/kegiatan/2.jpeg" alt="Panitia" class="project-img">
             </div>
-
-            <div class="card">
-                <h3>Panitia Divisi Acara</h3>
-                <img src="images/kegiatan/2.jpeg" alt="Project" class="project-img">
-                <p>Foto bersama Panitia Divisi Acara</p>            
-            </div>
-
-            <div class="card">
-                <h3>Sosialisasi Narkotika</h3>
-                <img src="images/kegiatan/3.jpeg" alt="Project" class="project-img">
-                <p>Sosialisasi Narkotika Badan Kesatuan Bangsa dan Politik</p>
-            </div>
-
-            <div class="card">
-                <h3>Video Promosi Unsada</h3>
-                <img src="images/kegiatan/4.jpeg" alt="Project" class="project-img">
-                <p>Menjadi model video promosi Universitas Darma Persada</p>
-            </div>
-
-            <div class="card">
-                <h3>Bootcamp Samsung</h3>
-                <img src="images/kegiatan/5.jpeg" alt="Project" class="project-img">
-                <p>Mengikuti Bootcamp Samsung Innovation Campus
-                    supported by Dibimbing
-                </p>
-            </div>
+            <h3>Panitia Divisi Acara</h3>
+            <p>Foto bersama Panitia Divisi Acara</p>
         </div>
-    </section>
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="images/kegiatan/3.jpeg" alt="Sosialisasi" class="project-img">
+            </div>
+            <h3>Sosialisasi Narkotika</h3>
+            <p>Badan Kesatuan Bangsa dan Politik</p>
+        </div>
 
-    <!-- Contact -->
-    <section id="contact">
-        <h2 class="contacth2">Contact</h2>
-        <a href="https://github.com/SuperDuperBaim" target="_blank" class="linkcont-a">GitHub</a>
-        <a href="mailto:anandaibrahimhs@gmail.com" target="_blank" class="linkcont-a">Email</a>
-        <a href="https://www.linkedin.com/in/ananda-ibrahim-hilal-syafrudin-4624a4393/" target="_blank" class="linkcont-a">LinkedIn</a>
-        <a href="https://www.instagram.com/baimhilal" target="_blank" class="linkcont-a">Instagram</a>
+        <div class="card">
+            <div class="card-img-wrapper">
+            <img src="images/kegiatan/4.jpeg" alt="Sosialisasi" class="project-img">
+            </div>
+            <h3>Video Promosi Unsada</h3>
+            <p>Menjadi model video promosi Universitas Darma Persada</p>
+        </div>
 
+        <div class="card">
+            <div class="card-img-wrapper">
+            <img src="images/kegiatan/5.jpeg" alt="Sosialisasi" class="project-img">
+            </div>
+            <h3>Bootcamp Samsung</h3>
+            <p>Mengikuti Bootcamp Samsung Innovation Campus supported by Dibimbing</p>
+        </div>
+        </div>
+</section>
 
-    </section>
+        <section id="contact" class="reveal">
+            <h2>Get In Touch</h2>
+            <div class="contact-links">
+                <a href="https://github.com/SuperDuperBaim" target="_blank" class="linkcont-a">GitHub</a>
+                <a href="mailto:anandaibrahimhs@gmail.com" target="_blank" class="linkcont-a">Email</a>
+                <a href="https://www.linkedin.com/in/ananda-ibrahim-hilal-syafrudin-4624a4393/" target="_blank" class="linkcont-a">LinkedIn</a>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
-        <p>Developed by me, using HTML, CSS, and JS.</p>
+        <p>Built by Ananda Ibrahim &copy; 2026</p>
     </footer>
 
-    <!-- JavaScript -->
     <script src="script.js"></script>
-
 </body>
 </html>
